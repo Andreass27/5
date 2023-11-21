@@ -1,0 +1,21 @@
+
+.popup__button{
+    min-width: 358px;
+    min-height: 50px;
+    flex-shrink: 0;
+    background-color: #000;
+    margin: 15px auto 25px;
+    color: #FFF;
+    font-family: Inter;
+    padding: 0;
+    opacity: 1;
+
+    
+    
+}
+
+.popup__button:hover{
+background-color: rgba(0, 0, 0, 0.8);
+transition: 0,5s linear;
+
+}

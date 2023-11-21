@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/blocks/vendor/index.css">
+  <link rel="stylesheet" href="/blocks/vendor/normalize.css">
+  <title>Mesto Russia</title>
+</head>
+<body>
+    <div class="page">
+    <header class="header">
+        <img class="header__logo" src="/image/logo.jpg" alt="logo"><img>
+    </header>
+<section class="profile">
+    <div class="profile__avatar"></div>
+    <div class="profile__info">
+    <div class="profile__text">
+        <h1 class="profile__name">Жак-Ив Кусто</h1>
+        <p class="profile__researcher">Исследователь океана</p>
+    </div>
+    <button class="profile__edit-button" type="button" id="Editbutton"></button>
+    </div>
+    <button class="profile__add-button" type="button" id="addButton"></button>
+</section>
+
+<section class="elements">
+    <template id="card__template">
+        <div class="element__template">
+          <img class="element__img"></img>
+          <div class="element__info">
+            <button class="element__trash" type="button" aria-label="Удалить"></button>
+            <h2 class="element__name"></h2>
+            <button class="element__like" type="button" aria-label="Лайк"></button>
+          </div>
+        </div>
+      </template>
+</section>
+<footer class="footer">
+    <P class="footer__author">© 2020 Mesto Russia</P>
+</footer>
+    </div>
+    <div class="popup">
+        <div class="popup__container">
+        <button class="popup__close"></button>
+          <form class="popup__form" method="post" id="editForm">
+            <h2 class="popup__text">Редактировать профиль</h2>
+            <input type="text" class="popup__input" id="name">
+            <input type="text" class="popup__input" id="researcher">
+            <button class="popup__button" type="submit">Сохранить</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup">
+        <div class="popup__bigwindow">
+          <img class="popup__image">
+          <button class="popup__close" type="button" aria-label="Закрытие формы">
+          </button>
+          <p class="popup__imgname"></p>
+        </div>
+      </div>
+
+      <div class="popup">
+        <div class="popup__container">
+            <button class="popup__close" type="button" aria-label="Закрытие формы"></button>
+          <form class="popup__form" method="post" id="addform">
+            <h2 class="popup__text">Новое место</h2>
+            <input type="text" class="popup__input" id="place" placeholder="название" >
+            <input type="text" class="popup__input" id="link" placeholder="ссылка на картинку"> 
+            <button class="popup__button" type="submit">Создать</button>
+          </form>
+        </div>
+      </div>
+    <script src="/blocks/script/initialCards.js"></script>
+    <script src="/blocks/script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+.profile__add-button{
+    background-image: url(/image/Add\ Button.svg);
+    min-width: 150px;
+    max-height: 50px;
+  background-color: black;
+  border: 1px solid white;
+  margin: 35px 0 0 0;
+  opacity: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  
+
+ 
+  
+  
+}
+
+.profile__add-button:hover{
+  opacity: 0.6 ;
+  transition: 0.5s linear;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__add-button {
+    min-width: 282px;
+    margin: 36px auto 0;
+    min-height: 50px;
+    /* border: none;  если убираю то она маленька стоновиться а так бордеры по бокам, не могу понять. */
+    border-radius: 2px;
+    border: 2px solid #fff;
+  
+  }
+}
