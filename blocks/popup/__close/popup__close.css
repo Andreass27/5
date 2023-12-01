@@ -6,7 +6,7 @@
     right: 10px;
     font-size: 23px;
     cursor: pointer;
-    opacity: 1;
+   
     border: none;
     background-image: url(/image/Close\ Icon.svg);
     min-width: 32px;
@@ -14,12 +14,24 @@
     flex-shrink: 0;
     top: -35px;
     right: -35px;
-    background-repeat: no-repeat
-    ;
+    background-repeat: no-repeat;
+
+    background-size: cover;
     
 }
 .popup__close:hover{
-opacity: 0.6 ;
-transition: 0.5s linear;
-cursor: pointer;
-}
+    opacity: 0.6 ;
+    transition: 0.5s linear;
+    cursor: pointer;
+  }
+
+@media screen and (max-width: 768px) {
+    .popup__close {
+   margin-top: 0px;
+    min-width: 20px;
+    min-height: 20px;
+    right: 0;
+    
+    }
+    }
+    

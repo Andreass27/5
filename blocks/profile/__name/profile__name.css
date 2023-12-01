@@ -5,13 +5,14 @@
     font-style: normal;
     font-weight: 500;
     line-height: 48px; 
-    max-width: 294px;
+    min-width: 294px;
     min-height: 39px;
     flex-shrink: 0;
-    margin-bottom: 16px;
+    margin: 10px 0px 16px 0px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+   
     }
 
     @media screen and (max-width: 768px) {

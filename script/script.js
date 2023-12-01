@@ -4,9 +4,6 @@ const profileEditButtonForm = document.forms.editForm;
 const profileAddButton = document.querySelector('.profile__add-button');
 const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__researcher');
-const popup = document.querySelector('.popup');
-const popupClose = document.querySelector('.popup__close');
-const formElement = document.querySelector('.popup__form'); 
 const nameInput = document.querySelector('#name');
 const jobInput = document.querySelector('#researcher');
 const InputPlace = document.querySelector('#place')
@@ -39,32 +36,12 @@ function submitprofileEditform (e) {
   closePopup(e);
 }
 
-
-
-profileEditButton.addEventListener('click', function() { //редактор профиля
-  nameInput.value = profileName.textContent;
-  jobInput.value = profileJob.textContent;
-  openPopup(profileEditButtonForm);
-});
-profileEditButtonForm.addEventListener('submit',submitprofileEditform); //сохранение редактора профиля
-
-
-bigWindowCloseButton.addEventListener('click', closePopup);
-
-profileAddButton.addEventListener('click', function(){ //редактор добавления карт
-  InputPlace.value ='';
-  InputLink.value = '';
-  openPopup(addCardsForm)
-});
-
-
-
-
-
-addCardCloseButton.addEventListener('click', closePopup); // кнопка закрытия добавленяи карт
-editProfileCloseButton.addEventListener('click', closePopup); //кнопка закрытяи профиля 
-
-
+function addCards(e){ //добавление карт
+  e.preventDefault();
+  const cards = createCards(InputPlace.value, InputLink.value);
+  Elements.prepend(cards);
+  closePopup(e);
+}
 
 
 function createCards(name, link) {
@@ -93,20 +70,37 @@ function createCards(name, link) {
   return cardElement // анти лайк
 }
 
-const loadCards = initialCards.forEach(function(item){
-const cards = createCards(item.name , item.link);
-Elements.prepend(cards);
-
-
-})
-function addCards(e){ //добавление карт
-  e.preventDefault();
-  const cards = createCards(InputPlace.value, InputLink.value);
+loadCards = initialCards.forEach(function(item){
+  cards = createCards(item.name , item.link);
   Elements.prepend(cards);
-  closePopup(e);
-}
+  })
 
+profileEditButton.addEventListener('click', function() { //редактор профиля
+  nameInput.value = profileName.textContent;
+  jobInput.value = profileJob.textContent;
+  openPopup(profileEditButtonForm);
+});
+
+profileAddButton.addEventListener('click', function(){ //редактор добавления карт
+  InputPlace.value ='';
+  InputLink.value = '';
+  openPopup(addCardsForm)
+});
+
+
+
+
+
+profileEditButtonForm.addEventListener('submit',submitprofileEditform); //сохранение редактора профиля
+bigWindowCloseButton.addEventListener('click', closePopup);
+addCardCloseButton.addEventListener('click', closePopup); // кнопка закрытия добавленяи карт
+editProfileCloseButton.addEventListener('click', closePopup); //кнопка закрытяи профиля 
 addCardsForm.addEventListener('submit', addCards);
+
+
+
+
+
 
 
 

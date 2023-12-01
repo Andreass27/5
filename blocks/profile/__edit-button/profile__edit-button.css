@@ -4,7 +4,7 @@
     max-height: 24px;
     background-color: black;
     border: 1px solid white;
-    margin: 43px 0 0 10px;
+    margin: 27px 0 0 -28px;
     opacity: 1;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,8 +21,9 @@
 }
 
 .profile__edit-button:hover{
-    opacity: 0.6;
-    transition: 0.5s linear;
-    cursor: pointer;
+  opacity: 0.6 ;
+  transition: 0.5s linear;
+  cursor: pointer;
 }
+
 

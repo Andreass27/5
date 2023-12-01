@@ -11,7 +11,7 @@
 @media screen and (max-width: 768px) {
     .elements {
       max-width: 600px;
-      padding: 0 22px 50px;
+    
     }
   }
 @media screen and (max-width: 950px) {
