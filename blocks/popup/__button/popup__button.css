@@ -4,20 +4,23 @@
     min-height: 50px;
     flex-shrink: 0;
     background-color: #000;
-    margin: 15px auto 25px;
-    color: #FFF;
-    font-family: Inter;
+    margin: 48px auto 36px;
+    color: #ffffff;
+    font-family: Inter, Arial, Helvetica, sans-serif;
     padding: 0;
-    opacity: 1;
     border: none;
+    font-size: 18px;
+    border: none;
+  
 
     
     
 }
 
 .popup__button:hover{
-background-color: rgba(0, 0, 0, 0.8);
+opacity: .8;
 transition: 0,5s linear;
+cursor: pointer;
 
 }
 

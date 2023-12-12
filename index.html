@@ -39,18 +39,20 @@
     <P class="footer__author">© 2020 Mesto Russia</P>
 </footer>
     </div>
-    <div class="popup">
+    <div class="popup popup_type_profile" >
         <div class="popup__container">
-        <button class="popup__close"></button>
-          <form class="popup__form" method="post" id="editForm">
-            <h2 class="popup__text">Редактировать профиль</h2>
-            <input type="text" class="popup__input" id="name">
-            <input type="text" class="popup__input" id="researcher">
+        <button class="popup__close" type="button"></button>
+          <form class="popup__form" method="post" id="editForm" name="editForm" novalidate>
+            <h2 class="popup__name">Редактировать профиль</h2>
+            <input type="text" class="popup__input" id="popup__name" required maxlength="40" minlength="2">
+            <span class="popup__name-error popup__input-error"></span>
+            <input type="text" class="popup__input" id="popup__researcher" required maxlength="200" minlength="2">
+            <span class="popup__researcher-error popup__input-error"></span>
             <button class="popup__button" type="submit">Сохранить</button>
           </form>
         </div>
       </div>
-      <div class="popup">
+      <div class="popup popup_type_bigImage">
         <div class="popup__bigwindow">
           <img class="popup__image">
           <button class="popup__close" type="button" aria-label="Закрытие формы">
@@ -59,18 +61,21 @@
         </div>
       </div>
 
-      <div class="popup">
+      <div class="popup popup_type_card-add">
         <div class="popup__container">
             <button class="popup__close" type="button" aria-label="Закрытие формы"></button>
-          <form class="popup__form" method="post" id="addform">
-            <h2 class="popup__text">Новое место</h2>
-            <input type="text" class="popup__input" id="place" placeholder="название" >
-            <input type="text" class="popup__input" id="link" placeholder="ссылка на картинку"> 
+          <form class="popup__form" method="post" id="addform" name="addform" novalidate>
+            <h2 class="popup__name">Новое место</h2>
+            <input type="text" class="popup__input" id="popup__place" placeholder="название" required maxlength="30" minlength="2">
+            <span class="popup__place-error popup__input-error"></span>
+            <input type="url" class="popup__input" id="popup__link" placeholder="ссылка на картинку" required> 
+            <span class="popup__link-error popup__input-error"></span>
             <button class="popup__button" type="submit">Создать</button>
           </form>
         </div>
       </div>
     <script src="/script/initialCards.js"></script>
+    <script src="/script/validate.js"></script>
     <script src="/script/script.js"></script>
 </body>
 </html>
